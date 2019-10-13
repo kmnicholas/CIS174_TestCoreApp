@@ -1,0 +1,107 @@
+﻿@model CIS174_TestCoreApp.Models.InfoViewModel
+
+<h2>Enter Your Info</h2>
+<form asp-action="Create" asp-controller="Info">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-4">
+                    <label asp-for="FirstName"></label>
+                </div>
+                <div class="col-md-4">
+                    <input class="form-control" asp-for="FirstName" />
+                </div>
+                <div class="pull-right col-md-8 text-danger">
+                    <span asp-validation-for="FirstName"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <label asp-for="LastName"></label>
+                </div>
+                <div class="col-md-4">
+                    <input class="form-control" asp-for="LastName" />
+                </div>
+                <div class="pull-right col-md-8 text-danger">
+                    <span asp-validation-for="LastName"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <label asp-for="Age"></label>
+                </div>
+                <div class="col-md-4">
+                    <input class="form-control" asp-for="Age" />
+                </div>
+                <div class="pull-right col-md-8 text-danger">
+                    <span asp-validation-for="Age"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <label asp-for="DateOfBirth"></label>
+                </div>
+                <div class="col-md-4">
+                    <input class="form-control" type="date" asp-for="DateOfBirth" />
+                </div>
+                <div class="pull-right col-md-8 text-danger">
+                    <span asp-validation-for="DateOfBirth"></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-4">
+                    <label asp-for="Email"></label>
+                </div>
+                <div class="col-md-4">
+                    <input class="form-control" asp-for="Email" />
+                </div>
+                <div class="pull-right col-md-8 text-danger">
+                    <span asp-validation-for="Email"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <label asp-for="Password"></label>
+                </div>
+                <div class="col-md-4">
+                    <input class="form-control" asp-for="Password" />
+                </div>
+                <div class="pull-right col-md-8 text-danger">
+                    <span asp-validation-for="Password"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <label asp-for="ConfirmPassword"></label>
+                </div>
+                <div class="col-md-4">
+                    <input class="form-control" asp-for="ConfirmPassword" />
+                </div>
+                <div class="pull-right col-md-8 text-danger">
+                    <span asp-validation-for="ConfirmPassword"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <label asp-for="Country"></label>
+                </div>
+                <div class="col-md-4">
+                    <input class="form-control" asp-for="Country" />
+                </div>
+                <div class="pull-right col-md-8 text-danger">
+                    <span asp-validation-for="Country"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button class="btn btn-primary" type="submit">Submit</button>
+</form>
