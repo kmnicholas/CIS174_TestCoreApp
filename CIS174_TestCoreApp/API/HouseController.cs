@@ -62,5 +62,12 @@ namespace CIS174_TestCoreApp.API
         {
             return Ok(HousesList[Int32.Parse(id) - 1]);
         }
+
+        [Route("api/house/create")]
+        [HttpPost]
+        public IActionResult CreateHouse()
+        {
+
+        }
     }
 }
