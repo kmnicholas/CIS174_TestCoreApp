@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 
 using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace CIS174_TestCoreApp.Models
 {
@@ -36,9 +37,17 @@ namespace CIS174_TestCoreApp.Models
 
         [Required]
         [Compare("Password")]
-        [Display(Name = "Confirm Name")]
+        [Display(Name = "Confirm Password")]
         public string ConfirmPassword { get; set; }
 
+        [Required(AllowEmptyStrings = false)]
         public string Country { get; set; }
+
+        public IEnumerable<SelectListItem> Countries { get; set; } = new List<SelectListItem>
+        {
+            new SelectListItem{Value = "Canada", Text = "Canada"},
+            new SelectListItem{Value = "Mexico", Text = "Mexico"},
+            new SelectListItem{Value = "USA", Text = "USA"}
+        };
     }
 }

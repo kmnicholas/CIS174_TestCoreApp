@@ -1,7 +1,7 @@
 ﻿@model CIS174_TestCoreApp.Models.InfoViewModel
 
 <h2>Enter Your Info</h2>
-<form asp-action="Create" asp-controller="Info">
+<form asp-action="CreatePerson" asp-controller="Info">
     <div class="row">
         <div class="col-md-6">
             <div class="row">
@@ -94,14 +94,23 @@
                     <label asp-for="Country"></label>
                 </div>
                 <div class="col-md-4">
-                    <input class="form-control" asp-for="Country" />
+                    <select class="form-control" asp-for="Country"
+                            asp-items="Model.Countries">
+                        <option value="">Please select country</option>
+                    </select>
                 </div>
                 <div class="pull-right col-md-8 text-danger">
                     <span asp-validation-for="Country"></span>
                 </div>
             </div>
+
+
+
         </div>
     </div>
 
     <button class="btn btn-primary" type="submit">Submit</button>
+
+    <div asp-validation-summary="ModelOnly"></div>
+
 </form>

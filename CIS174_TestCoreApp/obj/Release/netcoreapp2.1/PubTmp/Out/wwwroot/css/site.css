@@ -15,6 +15,7 @@ div {
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+    padding-top: 35px;
 }
 
 /* Carousel */
@@ -40,3 +41,9 @@ div {
         display: none;
     }
 }
+
+.warning {
+    color: red;
+    padding: 0;
+}
+

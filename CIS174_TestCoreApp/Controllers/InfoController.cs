@@ -16,18 +16,20 @@ namespace CIS174_TestCoreApp.Controllers
         // The Index method opens the Info/Index view
         public IActionResult Index()
         {
-            return View();
+            return View(new InfoViewModel());
         }
 
         [HttpPost]
-        public IActionResult Create(InfoViewModel model)
+        public IActionResult CreatePerson(InfoViewModel model)
         {
             if (!ModelState.IsValid)
             {
-                return View(model);
+                return View("Index", model);
             }
 
             return RedirectToAction("Index", "Home");
         }
+
+        
     }
 }

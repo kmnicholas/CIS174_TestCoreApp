@@ -43,10 +43,17 @@
                     </li>
                 </ul>
             </div>
+            <environment include="Testing, Staging, Development">
+                <div class="warning">You are currently on a testing environment</div>
+            </environment>
         </div>
     </nav>
 
+
+
     <partial name="_CookieConsentPartial" />
+
+    
 
     <div class="container body-content">
         @RenderBody()
