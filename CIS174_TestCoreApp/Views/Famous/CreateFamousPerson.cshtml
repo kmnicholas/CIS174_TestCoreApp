@@ -1,0 +1,74 @@
+﻿@model CIS174_TestCoreApp.Models.FamousCommands.CreateFamousPersonCommand
+
+<h2>Enter Your Info</h2>
+<form asp-action="CreateFamousPerson" asp-controller="Famous" method="post">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-4">
+                    <label asp-for="FirstName"></label>
+                </div>
+                <div class="col-md-4">
+                    <input class="form-control" asp-for="FirstName" />
+                </div>
+                <div class="pull-right col-md-8 text-danger">
+                    <span asp-validation-for="FirstName"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <label asp-for="LastName"></label>
+                </div>
+                <div class="col-md-4">
+                    <input class="form-control" asp-for="LastName" />
+                </div>
+                <div class="pull-right col-md-8 text-danger">
+                    <span asp-validation-for="LastName"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <label asp-for="Birthdate"></label>
+                </div>
+                <div class="col-md-4">
+                    <input class="form-control" type="date" asp-for="Birthdate" />
+                </div>
+                <div class="pull-right col-md-8 text-danger">
+                    <span asp-validation-for="Birthdate"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <label asp-for="City"></label>
+                </div>
+                <div class="col-md-4">
+                    <input class="form-control" asp-for="City" />
+                </div>
+                <div class="pull-right col-md-8 text-danger">
+                    <span asp-validation-for="City"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <label asp-for="State"></label>
+                </div>
+                <div class="col-md-4">
+                    <input class="form-control" asp-for="State" />
+                </div>
+                <div class="pull-right col-md-8 text-danger">
+                    <span asp-validation-for="State"></span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <button class="btn btn-primary" type="submit">Submit</button>
+
+    <div asp-validation-summary="ModelOnly"></div>
+
+</form>

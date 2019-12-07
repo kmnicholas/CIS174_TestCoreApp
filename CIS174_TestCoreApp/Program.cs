@@ -20,5 +20,6 @@ namespace CIS174_TestCoreApp
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>();
+
     }
 }
